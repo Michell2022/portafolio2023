@@ -18,6 +18,13 @@ import { ContactComponent } from './contact/contact.component';
   ],
   imports: [
     CommonModule
+  ],
+  exports: [
+    HomeComponent,
+    AboutComponent,
+    ServicesComponent,
+    PortafolioComponent,
+    ContactComponent
   ]
 })
 export class PagesModule { }

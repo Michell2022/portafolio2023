@@ -1,0 +1,77 @@
+.contact h2{
+    text-align: center;
+    font-size: 2.8rem;
+}
+
+.contact span{
+    color: var(--main-color);
+}
+
+.contact form{
+    max-width: 45rem;
+    margin: 1rem auto;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.contact form .input-box{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.contact form .input-box input,
+.contact form textarea{
+    width: 100%;
+    padding: 0.8rem;
+    font-size: 0.9rem;
+    background: var(--text-color);
+    color: var(--second-color);
+    border-radius: 0.4rem;
+    margin: 0.4rem 0;
+    box-shadow: 0 1.6px 6px var(--shadow-color);
+}
+
+.contact form .input-box input{
+    width: 49%;
+}
+
+.contact form textarea{
+    resize: none;
+}
+
+.btnEnviar {
+    display: inline-block;
+    padding: 0.4rem 1.9rem;
+    background: var(--main-color);
+    border: 2px solid var(--main-color);
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    color: var(--text-color);
+    letter-spacing: .1rem;
+    font-weight: 600;
+    transition: .5s ease;
+    
+}
+
+.btnEnviar:hover {
+    background: none;
+    color: var(--main-color);
+    box-shadow: 4px 4px 10px 1px rgba(0, 0, 0, 0.3); 
+}
+
+
+.contact form .btnEnviar{
+    margin-top: 1rem;
+    cursor: pointer;
+}
+
+@media (max-width:760px){
+    .contact h2{
+        font-size: 2.4rem;
+    }
+
+    .contact form .input-box input{
+        width: 100%;
+    }
+}

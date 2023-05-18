@@ -1,1 +1,36 @@
 /* You can add global styles to this file, and also import other style files */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+/* You can add global styles to this file, and also import other style files */
+:root{
+    --header-color: #FBFBFB;     /*color del header*/
+    
+    --main-color: #7551F3;       /*color del logo*/
+
+    --text-color: #FFFFFF;
+
+    --text-body: #010718;        /*color del texto del body*/
+
+    --side-nav: #212121;         /*color de sidebar en 768px*/
+
+    --second-color:#323946;
+
+    --shadow-color: rgba(0, 0, 0, .2);
+}
+
+section {
+    min-height: 100vh;
+    padding: 6.5rem 9% 2rem;
+}
