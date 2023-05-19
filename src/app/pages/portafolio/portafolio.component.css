@@ -56,7 +56,7 @@
     align-items: center;
     flex-direction: column;
     text-align: center;
-    padding: 0 4rem;
+    padding: 0 3rem;
     transform: translateY(100%);
     transition: .5s ease;
 }
@@ -91,12 +91,26 @@
     color: var(--second-gb-color);
 }
 
+@media (max-width: 1200px){
+    .portafolio-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
 @media (max-width:760px){
     .portafolio h2 {
-        font-size: 2.4rem;
+        font-size: 2.2rem;
     }
 
     .portafolio-container {
         grid-template-columns: repeat(1, 1fr);
+    }
+
+    .portafolio-box .portafolio-layer {
+        padding: 0 2rem;
+    }
+
+    .portafolio-layer h4 {
+        font-size: 1.8rem;
     }
 }
