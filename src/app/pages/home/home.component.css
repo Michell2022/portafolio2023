@@ -91,7 +91,7 @@ span {
     border-radius: 0.5rem;
 
     font-size: 1rem;
-    color: var(--text-color);
+    color: var(--white-color);
     letter-spacing: .1rem;
     font-weight: 600;
     transition: .5s ease;

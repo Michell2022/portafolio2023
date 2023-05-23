@@ -2,16 +2,16 @@
     display: flex;
     justify-content: center;
     padding: 2rem 9%;
-    background: var(--side-nav);
+    background: var(--main-color);
 }
 
 #current-year {
-    color: var(--text-color);
+    color: var(--white-color);
 }
 
 .footer-text p {
     font-size: 1rem;
-    color: var(--text-color);
+    color: var(--white-color);
 }
 
 
@@ -42,7 +42,7 @@
 
 .footer-iconTop a i {
     font-size: 2rem;
-    color: var(--text-color);
+    color: var(--white-color);
 }
 
 @media (max-width:760px){

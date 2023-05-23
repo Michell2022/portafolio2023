@@ -44,10 +44,23 @@ export class HeaderComponent implements OnInit {
       let header = this.elementRef.nativeElement.querySelector('header');
       header.classList.toggle('sticky', window.scrollY > 100);
 
-      // remove toggle icon and navbar when click navbar link (scroll).
+      // Elimina el ícono de alternar y la barra de navegación cuando haga clic en el enlace de la barra de navegación (desplazamiento).
       menuIcon.classList.remove('bx-x');
       navbar.classList.remove('active');
     };
+
+    // EVENTO CLICK PARA CAMBIAR DE DE TEMA CLARO - MOON Y SUN
+    let label = this.elementRef.nativeElement.querySelector('.theme-switch');
+    let darkModeIcon = this.elementRef.nativeElement.querySelector('#darkMode-icon');
+    let slider = this.elementRef.nativeElement.querySelector('.slider');
+
+    let toggleDarkMode = () => {
+      darkModeIcon.classList.toggle('bxs-sun');
+      document.body.classList.toggle('dark-mode');
+    };
+
+    label.addEventListener('click', toggleDarkMode);
+    slider.addEventListener('click', toggleDarkMode);
   }
 }
 

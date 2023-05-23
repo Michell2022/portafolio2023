@@ -25,8 +25,8 @@
     width: 100%;
     padding: 0.8rem;
     font-size: 0.9rem;
-    background: var(--text-color);
-    color: var(--second-color);
+    background: var(--bg-formulario);
+    color: var(--text-color);
     border-radius: 0.4rem;
     margin: 0.4rem 0;
     box-shadow: 0 1.6px 6px var(--shadow-color);
@@ -47,7 +47,7 @@
     border: 2px solid var(--main-color);
     border-radius: 0.5rem;
     font-size: 1rem;
-    color: var(--text-color);
+    color: var(--white-color);
     letter-spacing: .1rem;
     font-weight: 600;
     transition: .5s ease;

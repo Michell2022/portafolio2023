@@ -15,19 +15,38 @@
 
 /* You can add global styles to this file, and also import other style files */
 :root{
-    --header-color: #FBFBFB;     /*color del header*/
+    --bg-color: #FDFDFD;         /*color del body*/
+    
+    --text-color: #333;          /*color del tecto*/
     
     --main-color: #7551F3;       /*color del logo*/
 
-    --text-color: #FFFFFF;
+    --white-color: #FDFDFD;      /*color blanco permanente*/
 
-    --text-body: #010718;        /*color del texto del body*/
+    --icon-color: #4b9bf7;
 
-    --side-nav: #212121;         /*color de sidebar en 768px*/
+    --bg-formulario: #FDFDFD;
 
-    --second-color:#323946;
+    --bg-theme: #acacac;
 
     --shadow-color: rgba(0, 0, 0, .2);
+}
+
+.dark-mode{
+    --bg-color: #0B061F;         /*color del body*/
+    
+    --text-color: #FDFDFD;          /*color del tecto*/
+
+    --white-color: #FDFDFD;
+
+    --bg-formulario: #333;
+
+    --icon-color: #ffd900;
+}
+
+body{
+    background: var(--bg-color);
+    color: var(--text-color);
 }
 
 section {

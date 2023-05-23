@@ -9,7 +9,7 @@
 }
 
 .portafolio {
-    background: var(--header-color);
+    background: var(--bg-color);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -67,13 +67,13 @@
 
 .portafolio-layer h4 {
     font-size: 2rem;
-    color: var(--text-color);
+    color: var(--white-color);
 }
 
 .portafolio-layer p {
     font-size: 1rem;
     margin: .2rem 0 0.5rem;
-    color: var(--text-color);
+    color: var(--white-color);
 }
 
 .portafolio-layer a {
@@ -82,13 +82,13 @@
     align-items: center;
     width: 3rem;
     height: 3rem;
-    background: var(--text-color);
+    background: var(--white-color);
     border-radius: 50%;
 }
 
 .portafolio-layer a i {
     font-size: 1.2rem;
-    color: var(--second-gb-color);
+    color: var(--main-color);
 }
 
 @media (max-width: 1200px){
