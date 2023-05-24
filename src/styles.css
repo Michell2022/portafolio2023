@@ -30,6 +30,8 @@
     --bg-theme: #acacac;
 
     --shadow-color: rgba(0, 0, 0, .2);
+
+    --border-bottom: rgba(0, 0, 0, .2);
 }
 
 .dark-mode{
@@ -42,6 +44,8 @@
     --bg-formulario: #333;
 
     --icon-color: #ffd900;
+
+    --border-bottom: rgba(255, 255, 255, 0.2);
 }
 
 body{

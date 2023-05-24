@@ -55,7 +55,7 @@
 }
 
 .btnEnviar:hover {
-    background: none;
+    background: var(--white-color);
     color: var(--main-color);
     box-shadow: 4px 4px 10px 1px rgba(0, 0, 0, 0.3); 
 }

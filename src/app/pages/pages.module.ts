@@ -7,7 +7,6 @@ import { PortafolioComponent } from './portafolio/portafolio.component';
 import { ContactComponent } from './contact/contact.component';
 
 
-
 @NgModule({
   declarations: [
     HomeComponent,

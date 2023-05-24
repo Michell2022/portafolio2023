@@ -18,7 +18,7 @@
 }
 
 .header.sticky {
-    border-bottom: .1rem solid rgba(0, 0, 0, .2);
+    border-bottom: .1rem solid var(--border-bottom);
 }
 
 .navbar ul {
@@ -42,6 +42,11 @@
 /******* ICONO NOCTURNO Y OSCURO *******/
 /***************************************/
 
+.theme-switch-wrapper{
+    display: flex;
+    align-items: center;
+}
+
 .theme-switch {
     display: inline-block;
     height: 29px;
@@ -62,7 +67,6 @@
     left: 0;
     bottom: 0;
     right: 0;
-    transition: .2s all;
     display: flex;
     align-items: center;
     border-radius: 34px;
@@ -133,7 +137,7 @@ input:checked+.slider .darkMode-icon {
     .theme-switch {
         position: absolute;
         right: 7rem;
-        top: 1.6rem;
+        top: 1.7rem;
     }
 }
 
@@ -142,6 +146,6 @@ input:checked+.slider .darkMode-icon {
     .theme-switch {
         position: absolute;
         right: 6rem;
-        top: 1.6rem;
+        top: 1.7rem;
     }
 }

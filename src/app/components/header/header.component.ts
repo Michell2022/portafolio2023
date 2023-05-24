@@ -49,16 +49,46 @@ export class HeaderComponent implements OnInit {
       navbar.classList.remove('active');
     };
 
-    // EVENTO CLICK PARA CAMBIAR DE DE TEMA CLARO - MOON Y SUN
-    let label = this.elementRef.nativeElement.querySelector('.theme-switch');
-    let darkModeIcon = this.elementRef.nativeElement.querySelector('#darkMode-icon');
-    let slider = this.elementRef.nativeElement.querySelector('.slider');
 
-    let toggleDarkMode = () => {
+
+
+
+
+    const elementRef = this.elementRef.nativeElement;
+
+    // EVENTO CLICK PARA CAMBIAR DE DE TEMA CLARO - MOON Y SUN
+    const label = elementRef.querySelector('.theme-switch');
+    const darkModeIcon = elementRef.querySelector('#darkMode-icon');
+    const slider = elementRef.querySelector('.slider');
+    
+    const applyThemeAndIconState = () => {
+      const savedTheme = localStorage.getItem('theme');
+      const savedIconState = localStorage.getItem('iconState');
+    
+      if (savedTheme) {
+        document.body.classList.add(savedTheme);
+      }
+    
+      if (savedIconState) {
+        darkModeIcon.classList.add(savedIconState);
+        darkModeIcon.style.transform = savedIconState === 'bxs-sun' ? 'translateX(25px)' : 'translateX(0)';
+      }
+    };
+    
+    const toggleDarkMode = () => {
       darkModeIcon.classList.toggle('bxs-sun');
       document.body.classList.toggle('dark-mode');
+    
+      const theme = document.body.classList.contains('dark-mode') ? 'dark-mode' : '';
+      const isSunIcon = darkModeIcon.classList.contains('bxs-sun');
+    
+      localStorage.setItem('theme', theme);
+      localStorage.setItem('iconState', isSunIcon ? 'bxs-sun' : '');
+    
+      darkModeIcon.style.transform = isSunIcon ? 'translateX(25px)' : 'translateX(0)';
     };
-
+    
+    applyThemeAndIconState();
     label.addEventListener('click', toggleDarkMode);
     slider.addEventListener('click', toggleDarkMode);
   }

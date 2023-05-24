@@ -5,7 +5,6 @@ import { HeaderComponent } from './header/header.component';
 import { PagesModule } from '../pages/pages.module';
 
 
-
 @NgModule({
   declarations: [
     FooterComponent,
