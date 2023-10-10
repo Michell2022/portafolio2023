@@ -6,7 +6,7 @@
         <div class="services-box" *ngFor="let servicio of servicios; let i = index">
             <i [class]="servicio.icono"></i>
             <h3>{{ servicio.titulo }}</h3>
-            <p [id]="'servicios' + i" [ngClass]="{'servicios-corto': !mostrarCompleto[i]}">
+            <p [id]="'servicios' + i" [ngClass]="{'servicios-corto': !mostrarCompleto[i]}" style="white-space: pre-line;">
                 {{ servicio.descripcion }}
                 <span [id]="'servicios-extra' + i" [hidden]="mostrarCompleto[i]" class="servicios-extra">
                     {{ servicio.textoExtra }}
@@ -14,11 +14,5 @@
             </p>
             <a class="btn" (click)="alternarMostrar(i)">{{ mostrarCompleto[i] ? 'Leer más' : 'Leer menos' }}</a>
         </div>
-
-
-
-
-
-
     </div>
 </section>
