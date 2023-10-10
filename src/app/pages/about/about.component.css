@@ -7,8 +7,9 @@
 }
 
 .about-img img{
-    width: 60vh;
-    /* width: 33vw; */
+    width: 27vw;
+    /* width: 500px; */
+    /* padding: 40px 25px 0 0; */
 }
 
 .heading{
