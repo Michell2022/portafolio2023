@@ -14,7 +14,7 @@ export class HomeComponent implements OnInit {
   ngOnInit(): void {
     //TYPED JAVASCRIPT -- PARA HACER ANIMACION DE TEXTO
     const typed = new Typed('.multiple-texto', {
-      strings: ['Front-End Developer', 'YouTuber', 'Técnico IT'],
+      strings: ['Full Stack Developer', 'Técnico IT', 'YouTuber'],
       typeSpeed: 100,
       backSpeed: 100,
       backDelay: 1000,
