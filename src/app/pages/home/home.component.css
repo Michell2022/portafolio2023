@@ -90,12 +90,6 @@ span {
     box-shadow: 4px 4px 10px 1px rgba(0, 0, 0, 0.3); 
 }
 
-@media (max-width:992px){
-    /* .home {
-        flex-direction: column;
-    } */
-}
-
 
 @media (max-width:760px) {
     .home {

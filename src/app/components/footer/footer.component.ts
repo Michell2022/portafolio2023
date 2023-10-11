@@ -15,10 +15,6 @@ export class FooterComponent implements OnInit {
     this.currentYearElement.nativeElement.textContent = currentYear.toString();
 
 
-
-
-
-
     //SE ENCARGA DE LA OCULTAR Y MOSTRAR LA ANIMACION DEL ICONO
     const footerIconTop = document.querySelector('.footer-iconTop');
 
@@ -30,7 +26,4 @@ export class FooterComponent implements OnInit {
       }
     });
   }
-
-
-
 }

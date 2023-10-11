@@ -1,18 +1,22 @@
 <section class="contact" id="contact">
     <h2 class="heading">Contácta<span>me!</span></h2>
 
-    <form>
+    <form [formGroup]="contactForm" (ngSubmit)="submitForm()">
         <div class="input-box">
-            <input type="text" id="name" placeholder="Nombre completo" autocomplete="name">
-            <input type="email" id="email" placeholder="Correo electrónico" autocomplete="email">
+            <input type="text" id="name" name="name" placeholder="Nombre completo" autocomplete="name"
+                formControlName="name">
+            <input type="email" id="email" name="email" placeholder="Correo electrónico" autocomplete="email"
+                formControlName="email">
         </div>
 
         <div class="input-box">
-            <input type="number" id="number" placeholder="Número móvil">
-            <input type="text" id="asunto" placeholder="Asunto">
+            <input type="number" id="number" name="number" placeholder="Número móvil" formControlName="number">
+            <input type="text" id="asunto" name="asunto" placeholder="Asunto" formControlName="asunto">
         </div>
 
-        <textarea name="" id="message" cols="30" rows="9" placeholder="Mensaje"></textarea>
-        <input type="submit" value="Enviar" class="btnEnviar">
+        <textarea id="message" name="message" cols="30" rows="9" placeholder="Mensaje"
+            formControlName="message"></textarea>
+        <input type="submit" class="btnEnviar" [disabled]="!contactForm.valid">
     </form>
+
 </section>
