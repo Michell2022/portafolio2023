@@ -1,3 +1,7 @@
+.contact {
+    overflow: hidden;
+}
+
 .contact h2 {
     text-align: center;
     font-size: 2.8rem;
@@ -74,6 +78,36 @@
     box-shadow: none;
 }
 
+.notification {
+    font-size: 0.8rem;
+    background: #5fcf03;
+    color: var(--white-color);
+    padding: 1rem 2rem;
+    letter-spacing: .1rem;
+    opacity: 0;
+    display: none;
+}
+
+/* Mostrar la notificación */
+.notification.show {
+    opacity: 1;
+    display: block;
+    animation: slideInFromRight 1s;
+}
+
+@keyframes slideInFromRight {
+    0% {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+
+
 
 
 
@@ -84,5 +118,10 @@
 
     .contact form .input-box input {
         width: 100%;
+    }
+
+    .notification {
+        font-size: 0.8rem;
+        padding: 1rem 1rem;
     }
 }

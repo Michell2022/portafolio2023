@@ -14,8 +14,10 @@
             <input type="text" id="asunto" name="asunto" placeholder="Asunto" formControlName="asunto">
         </div>
 
-        <textarea id="message" name="message" cols="30" rows="9" placeholder="Mensaje"
-            formControlName="message"></textarea>
+        <textarea id="message" name="message" cols="30" rows="9" placeholder="Mensaje" formControlName="message"></textarea>
+        <div class="notification" [ngClass]="{'show': isModalVisible}">
+            <p>Tu mensaje se ha enviado con éxito.</p>
+        </div>
         <input type="submit" class="btnEnviar" [disabled]="!contactForm.valid">
     </form>
 
