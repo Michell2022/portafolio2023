@@ -26,7 +26,7 @@
 }
 
 .navbar a {
-    font-size: 17px;
+    font-size: 0.9rem;
     font-weight: 500;
     margin-right: 0.6rem;
     padding: 0.4rem 0.9rem;
@@ -83,24 +83,68 @@ input:checked+.slider .darkMode-icon {
 }
 
 
-
-
-
-
-/***************************************/
-/******* ICONO AMBURGUEZA *******/
-/***************************************/
-#menu-icon {
+/*******************************************************/
+/************  DISEÑO DE ICONO HAMBURGUEZA  ************/
+/*******************************************************/
+#toggle.hamburgueza {
     display: none;
-    font-size: 2.5rem;
+}
+
+.hamburgueza {
+    position: relative;
+    height: 30px;
+    width: 35px;
+    display: inline-block;
     cursor: pointer;
-    color: var(--text-color);
+    margin: 10px;
+}
+
+.hamburgueza span {
+    position: absolute;
+    height: 4px;
+    width: 100%;
+    transition-duration: 300ms;
+    background: var(--bg-hamburgueza);
+    border-radius: 2px;
+    transition: .3s cubic-bezier(.8, .5, .2, 1.4);
+}
+
+.hamburgueza span:nth-child(1) {
+    top: 0;
+    left: 0;
+}
+
+.hamburgueza span:nth-child(2) {
+    top: 13px;
+    left: 0;
+    opacity: 1;
+}
+
+.hamburgueza span:nth-child(3) {
+    bottom: 0;
+    left: 0;
+}
+
+.hamburgueza.open span:nth-child(1) {
+    transform: rotate(45deg);
+    top: 13px;
+}
+
+.hamburgueza.open span:nth-child(2) {
+    opacity: 0;
+    margin-left: -40px;
+}
+
+.hamburgueza.open span:nth-child(3) {
+    transform: rotate(-45deg);
+    bottom: 13px;
 }
 
 
 
+
 @media (max-width: 980px) {
-    #menu-icon {
+    #toggle.hamburgueza {
         display: block;
     }
 
@@ -110,17 +154,23 @@ input:checked+.slider .darkMode-icon {
 
     .navbar {
         position: absolute;
-        top: 100%;
-        left: 0;
-        width: 100%;
+        top: 0;
+        left: -100%;
+        margin-top: 82px;
+        width: 70%;
+        height: 100vh;
+        transition: .3s all;
         background: var(--bg-color);
-        border-top: .1rem solid rgba(0, 0, 0, .2);
-        box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .2);
-        display: none;
+        box-shadow: 2px 20px 15px 0px rgba(0,0,0,0.2);
+        visibility: hidden;
+        opacity: 0;
+        z-index: 999;
     }
 
-    .navbar.active {
-        display: block;
+    .navbar.efecto {
+        left: 0;
+        visibility: visible;
+        opacity: 1;
     }
 
     .navbar ul {
@@ -136,8 +186,8 @@ input:checked+.slider .darkMode-icon {
 
     .theme-switch {
         position: absolute;
-        right: 7rem;
-        top: 1.7rem;
+        right: 9rem;
+        top: 1.95rem;
     }
 }
 
@@ -145,7 +195,6 @@ input:checked+.slider .darkMode-icon {
 
     .theme-switch {
         position: absolute;
-        right: 6rem;
-        top: 1.7rem;
+        right: 8rem;
     }
 }

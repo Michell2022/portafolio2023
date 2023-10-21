@@ -12,13 +12,17 @@ export class HeaderComponent implements OnInit {
   constructor(private elementRef: ElementRef) { }
 
   ngOnInit(): void {
-    const menuIcon = this.elementRef.nativeElement.querySelector('#menu-icon');
+    const icons = this.elementRef.nativeElement.querySelector('#toggle');
     const navbar = this.elementRef.nativeElement.querySelector('.navbar');
 
-    menuIcon.addEventListener('click', () => {
-      menuIcon.classList.toggle('bx-x');
-      navbar.classList.toggle('active');
-    });
+    if (icons) {
+      icons.addEventListener('click', () => {
+        icons.classList.toggle('open');
+        navbar.classList.toggle('efecto');
+      });
+    };
+
+    
 
 
     // Enlace activo de las secciones de desplazamiento.
@@ -45,8 +49,8 @@ export class HeaderComponent implements OnInit {
       header.classList.toggle('sticky', window.scrollY > 100);
 
       // Elimina el ícono de alternar y la barra de navegación cuando haga clic en el enlace de la barra de navegación (desplazamiento).
-      menuIcon.classList.remove('bx-x');
-      navbar.classList.remove('active');
+      icons.classList.remove('open');
+      navbar.classList.remove('efecto');
     };
 
 

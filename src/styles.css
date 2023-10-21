@@ -32,6 +32,8 @@
     --shadow-color: rgba(0, 0, 0, .2);
 
     --border-bottom: rgba(0, 0, 0, .2);
+
+    --bg-hamburgueza: #333;
 }
 
 .dark-mode{
@@ -46,6 +48,8 @@
     --icon-color: #ffd900;
 
     --border-bottom: rgba(255, 255, 255, 0.2);
+
+    --bg-hamburgueza: #fff;
 }
 
 body{
